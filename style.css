@@ -47,6 +47,7 @@ li {
 .toggle {
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .toggle:focus {
