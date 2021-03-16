@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    color: #364f6b;
+    font-size: 1.2rem;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background: linear-gradient(#fae3d9 50%, #bbded6 50%);
+}
+
+.container {
+    background-color: #f6f6f6;
+    box-shadow: 1px 1px 2px 1px #364f6b;
+    border-radius: 5px;
+    width: 600px;
+    transition: all 1000ms ease;
+}
+
+.nav-block {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-right: 50px;
+}
+
+.active {
+    width: 80px;
+    transition: all 1000ms ease;
+}
+
+li {
+    display: inline-block;
+    text-transform: uppercase;
+    margin: auto 30px auto auto;
+    transition: all 1000ms ease;
+}
+
+.toggle {
+    border: none;
+    background-color: transparent;
+}
+
+.toggle:focus {
+    outline: none;
+}
+
+.fa-top {
+    position: absolute;
+    right: 30px;
+    bottom: 2px;
+    transform: rotate(45deg);
+    transition: all 1000ms ease;
+}
+
+.fa-bottom {
+    position: absolute;
+    right: 30px;
+    top: 2px;
+    transform: rotate(-45deg);
+    transition: all 1000ms ease;
+}
+
+.rotating {
+    display: inline-block;
+    transform: translateX(200px) rotateY(520deg);
+    opacity: 0;
+    transition: all 1000ms ease;
+}
+
+.active .nav-block .fa-top {
+    position: absolute;
+    bottom: -2px;
+    right: 38px;
+    transform: rotate(900deg);
+    transition: all 1000ms ease;
+}
+
+.active .nav-block .fa-bottom {
+    position: absolute;
+    top: -2px;
+    right: 38px;
+    transform: rotate(-900deg);
+    transition: all 1000ms ease;
+}
